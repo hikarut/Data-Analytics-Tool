@@ -56,7 +56,11 @@ export default {
   /*
    ** Global CSS
    */
-  // css: [{ src: '~assets/css/main.scss', lang: 'scss' }],
+  css: [{ src: '~assets/scss/bluma.scss', lang: 'scss' }],
+
+  styleResources: {
+    scss: ['~/assets/scss/common.scss'],
+  },
   /*
    ** Plugins to load before mounting the App
    */

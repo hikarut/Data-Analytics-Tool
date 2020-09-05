@@ -29,6 +29,7 @@ module.exports = {
         'allowFirstLine': true
       },
     }],
+    'vue/singleline-html-element-content-newline': 'off',
     'prettier/prettier': ['error', {
       'printWidth': 80
     }]
