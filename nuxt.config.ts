@@ -1,4 +1,4 @@
-import constant from './config/constant.json'
+// import constant from './config/constant.json'
 
 export default {
   mode: 'universal',
@@ -6,28 +6,33 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: constant.TITLE,
+    title: 'Data Analytics Tool',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'keywords', name: 'keywords', content: constant.KEYWORD },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'データサイエンティスト,データアナリスト,データエンジニア,データ分析,ツール',
+      },
       {
         hid: 'description',
         name: 'description',
-        content: constant.DESCRIPTION,
+        content: 'データ分析ツール',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${constant.URL}/ogimage.png`,
+        content: 'https://yahoo.co.jp/',
       },
-      { hid: 'og:title', property: 'og:title', content: constant.TITLE },
-      { hid: 'og:url', property: 'og:url', content: constant.URL },
+      { hid: 'og:title', property: 'og:title', content: 'Data Analytics Tool' },
+      { hid: 'og:url', property: 'og:url', content: 'https://yahoo.co.jp/' },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: constant.DESCRIPTION,
+        content: 'データ分析ツール',
       },
       {
         hid: 'twitter:card',
@@ -36,11 +41,11 @@ export default {
       },
       {
         name: 'application-name',
-        content: constant.APPLICATION_NAME,
+        content: 'Data Analytics Tool',
       },
       {
         name: 'apple-mobile-web-app-title',
-        content: constant.APPLICATION_NAME,
+        content: 'Data Analytics Tool',
       },
     ],
   },
@@ -90,6 +95,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
+    // extend(config: any, ctx: any) {},
   },
 }
