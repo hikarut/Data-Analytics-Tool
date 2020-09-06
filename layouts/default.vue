@@ -5,7 +5,7 @@
       <div class="column side-menu">
         <the-menu />
       </div>
-      <div class="column is-four-fifths">
+      <div class="column is-four-fifths main-column">
         <nuxt />
       </div>
     </div>
@@ -34,5 +34,8 @@ export default Vue.extend({
 }
 .columns:not(:last-child) {
   margin-bottom: 0;
+}
+.main-column {
+  min-height: 480px;
 }
 </style>

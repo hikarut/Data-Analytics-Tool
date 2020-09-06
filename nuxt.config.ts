@@ -48,6 +48,13 @@ export default {
         content: 'Data Analytics Tool',
       },
     ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css',
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
