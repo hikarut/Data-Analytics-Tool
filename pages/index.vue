@@ -21,6 +21,6 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .title {
-  color: $main;
+  color: $blue;
 }
 </style>
