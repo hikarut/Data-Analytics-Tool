@@ -30,7 +30,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .side-menu {
-  background-color: $whitesmoke;
+  // background-color: $whitesmoke;
 }
 .columns:not(:last-child) {
   margin-bottom: 0;

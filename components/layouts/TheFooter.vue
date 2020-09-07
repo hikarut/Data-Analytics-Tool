@@ -10,7 +10,9 @@
 
 <style lang="scss" scoped>
 .footer {
-  color: $whitesmoke;
-  background-color: $dark;
+  // color: $whitesmoke;
+  color: $dark;
+  // background-color: $dark;
+  background-color: $whitesmoke;
 }
 </style>
