@@ -11,26 +11,16 @@
               <p class="panel-heading">Aパターン</p>
               <div class="container is-fluid">
                 <div class="notification">
-                  <p class="control has-icons-left">
-                    <input
-                      class="input is-large"
-                      type="text"
-                      placeholder="Visitors"
-                    />
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-user"></i>
-                    </span>
-                  </p>
-                  <p class="control has-icons-left">
-                    <input
-                      class="input is-large"
-                      type="text"
-                      placeholder="Conversions"
-                    />
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-heart"></i>
-                    </span>
-                  </p>
+                  <input-number
+                    icon="fas fa-user"
+                    placeholder="Visitors"
+                    @parentMethod="setAVisitors"
+                  />
+                  <input-number
+                    icon="fas fa-heart"
+                    placeholder="Conversions"
+                    @parentMethod="setAConversions"
+                  />
                 </div>
               </div>
             </article>
@@ -41,31 +31,22 @@
               <p class="panel-heading">Bパターン</p>
               <div class="container is-fluid">
                 <div class="notification">
-                  <p class="control has-icons-left">
-                    <input
-                      class="input is-large"
-                      type="text"
-                      placeholder="Visitors"
-                    />
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-user"></i>
-                    </span>
-                  </p>
-                  <p class="control has-icons-left">
-                    <input
-                      class="input is-large"
-                      type="text"
-                      placeholder="Conversions"
-                    />
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-heart"></i>
-                    </span>
-                  </p>
+                  <input-number
+                    icon="fas fa-user"
+                    placeholder="Visitors"
+                    @parentMethod="setBVisitors"
+                  />
+                  <input-number
+                    icon="fas fa-heart"
+                    placeholder="Conversions"
+                    @parentMethod="setBConversions"
+                  />
                 </div>
               </div>
             </article>
           </div>
         </div>
+        <button class="button is-large" @click="check()">Large</button>
       </div>
     </div>
   </section>
@@ -73,10 +54,43 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import InputNumber from '~/components/pages/abtest/InputNumber'
 
 export default Vue.extend({
-  beforeMount() {
-    console.log(111)
+  components: {
+    InputNumber,
+  },
+  data: () => ({
+    aVisitors: 0,
+    bVisitors: 0,
+    aConversions: 0,
+    bConversions: 0,
+  }),
+  methods: {
+    check() {
+      console.log('this.aVisitors')
+      console.log(this.aVisitors)
+      console.log('this.aConversions')
+      console.log(this.aConversions)
+      console.log('this.bVisitors')
+      console.log(this.bVisitors)
+      console.log('this.bConversions')
+      console.log(this.bConversions)
+    },
+    setAVisitors(value, key) {
+      console.log(value)
+      console.log(key)
+      this.aVisitors = value
+    },
+    setAConversions(value) {
+      this.aConversions = value
+    },
+    setBVisitors(value) {
+      this.bVisitors = value
+    },
+    setBConversions(value) {
+      this.bConversions = value
+    },
   },
 })
 </script>
