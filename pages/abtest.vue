@@ -7,13 +7,7 @@
             <h1 class="title">AB Test Tool</h1>
             <h2 class="subtitle">ABテストの有意差判定ツール</h2>
           </div>
-          <div class="column">
-            <div class="check-button">
-              <button class="button is-large is-fullwidth" @click="check()">
-                Check
-              </button>
-            </div>
-          </div>
+          <div class="column"></div>
         </div>
 
         <div class="columns">
@@ -32,6 +26,7 @@
                     placeholder="Conversions"
                     @parentMethod="setAConversions"
                   />
+                  <p class="center">Conversion rate</p>
                   <div class="cvr" :class="aWinLose">{{ aCvr }} %</div>
                   <div class="win-lose" :class="aWinLose">{{ aWinLose }}</div>
                 </div>
@@ -54,6 +49,7 @@
                     placeholder="Conversions"
                     @parentMethod="setBConversions"
                   />
+                  <p class="center">Conversion rate</p>
                   <div class="cvr" :class="bWinLose">{{ bCvr }} %</div>
                   <div class="win-lose" :class="bWinLose">{{ bWinLose }}</div>
                 </div>
@@ -66,6 +62,11 @@
           <span class="statistics-value">z-score: {{ zValue }}</span>
           <span class="statistics-value">uplift: {{ uplift }}%</span>
         </div>
+      </div>
+      <div class="check-button">
+        <button class="button is-large is-fullwidth" @click="check()">
+          Check
+        </button>
       </div>
     </div>
   </section>
@@ -143,8 +144,8 @@ export default Vue.extend({
   margin: 10px;
 }
 .check-button {
-  // width: 50%;
-  // margin: 0 auto;
+  width: 50%;
+  margin: 20px auto;
 }
 .cvr,
 .win-lose {
@@ -166,5 +167,9 @@ export default Vue.extend({
   font-size: 20px;
   margin-right: 40px;
   font-weight: bold;
+}
+.center {
+  text-align: center;
+  margin-top: 20px;
 }
 </style>
