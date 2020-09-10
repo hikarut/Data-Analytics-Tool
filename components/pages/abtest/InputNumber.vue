@@ -3,7 +3,8 @@
     <input
       v-model="inputValue"
       class="input is-large"
-      type="text"
+      type="number"
+      min="0"
       :placeholder="placeholder"
     />
     <span class="icon is-small is-left">
@@ -39,4 +40,13 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+</style>

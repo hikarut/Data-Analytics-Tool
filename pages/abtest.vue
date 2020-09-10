@@ -2,8 +2,19 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title">AB Test Tool</h1>
-        <h2 class="subtitle">ABテストの有意差判定ツール</h2>
+        <div class="columns">
+          <div class="column is-two-thirds">
+            <h1 class="title">AB Test Tool</h1>
+            <h2 class="subtitle">ABテストの有意差判定ツール</h2>
+          </div>
+          <div class="column">
+            <div class="check-button">
+              <button class="button is-large is-fullwidth" @click="check()">
+                Check
+              </button>
+            </div>
+          </div>
+        </div>
 
         <div class="columns">
           <div class="column">
@@ -21,6 +32,8 @@
                     placeholder="Conversions"
                     @parentMethod="setAConversions"
                   />
+                  <div class="cvr" :class="aWinLose">{{ aCvr }} %</div>
+                  <div class="win-lose" :class="aWinLose">{{ aWinLose }}</div>
                 </div>
               </div>
             </article>
@@ -41,12 +54,18 @@
                     placeholder="Conversions"
                     @parentMethod="setBConversions"
                   />
+                  <div class="cvr" :class="bWinLose">{{ bCvr }} %</div>
+                  <div class="win-lose" :class="bWinLose">{{ bWinLose }}</div>
                 </div>
               </div>
             </article>
           </div>
         </div>
-        <button class="button is-large" @click="check()">Large</button>
+        <div class="statistics">
+          <span class="statistics-value">p-value: {{ pValue }}</span>
+          <span class="statistics-value">z-score: {{ zValue }}</span>
+          <span class="statistics-value">uplift: {{ uplift }}%</span>
+        </div>
       </div>
     </div>
   </section>
@@ -65,6 +84,13 @@ export default Vue.extend({
     bVisitors: 0,
     aConversions: 0,
     bConversions: 0,
+    aCvr: 0,
+    bCvr: 0,
+    aWinLose: '-',
+    bWinLose: '-',
+    pValue: 0,
+    zValue: 0,
+    uplift: 0,
   }),
   methods: {
     check() {
@@ -76,6 +102,12 @@ export default Vue.extend({
       console.log(this.bVisitors)
       console.log('this.bConversions')
       console.log(this.bConversions)
+      this.aCvr =
+        Math.round((this.aConversions / this.aVisitors) * 100 * 100) / 100
+      this.bCvr =
+        Math.round((this.bConversions / this.bVisitors) * 100 * 100) / 100
+      this.aWinLose = 'Win'
+      this.bWinLose = 'Lose'
     },
     setAVisitors(value, key) {
       console.log(value)
@@ -97,10 +129,11 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .title {
-  color: $dark;
+  color: $blue;
 }
 .panel-heading {
-  background-color: $orange;
+  // background-color: $orange;
+  background-color: $dark;
   color: $white;
 }
 .notification {
@@ -108,5 +141,30 @@ export default Vue.extend({
 }
 .control {
   margin: 10px;
+}
+.check-button {
+  // width: 50%;
+  // margin: 0 auto;
+}
+.cvr,
+.win-lose {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 20px;
+}
+.Win {
+  color: $orange;
+}
+.Lose {
+  // color: $gray;
+}
+.statistics {
+  text-align: center;
+}
+.statistics-value {
+  font-size: 20px;
+  margin-right: 40px;
+  font-weight: bold;
 }
 </style>
