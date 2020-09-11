@@ -64,7 +64,10 @@
         </div>
       </div>
       <div class="check-button">
-        <button class="button is-large is-fullwidth" @click="check()">
+        <button
+          class="button is-large is-fullwidth is-primary"
+          @click="check()"
+        >
           Check
         </button>
       </div>
