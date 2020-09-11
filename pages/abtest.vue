@@ -113,18 +113,17 @@ export default Vue.extend({
       this.aWinLose = 'Win'
       this.bWinLose = 'Lose'
     },
-    setAVisitors(value, key) {
+    setAVisitors(value: number) {
       console.log(value)
-      console.log(key)
       this.aVisitors = value
     },
-    setAConversions(value) {
+    setAConversions(value: number) {
       this.aConversions = value
     },
-    setBVisitors(value) {
+    setBVisitors(value: number) {
       this.bVisitors = value
     },
-    setBConversions(value) {
+    setBConversions(value: number) {
       this.bConversions = value
     },
   },
