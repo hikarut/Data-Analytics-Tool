@@ -32,7 +32,7 @@ export default Vue.extend({
       get() {
         return null
       },
-      set(value) {
+      set(value: number) {
         this.$emit('parentMethod', value)
       },
     },

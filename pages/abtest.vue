@@ -77,7 +77,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import InputNumber from '~/components/pages/abtest/InputNumber'
+import InputNumber from '~/components/pages/abtest/InputNumber.vue'
 
 export default Vue.extend({
   components: {
