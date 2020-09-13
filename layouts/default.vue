@@ -31,6 +31,10 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .side-menu {
   // background-color: $whitesmoke;
+  // box-shadow: 8px 0 1em -0.125em rgba(10, 10, 10, 0.1);
+  // box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1);
+  // border-style: solid;
+  // border-color: $white $whitesmoke $white $white;
 }
 .columns:not(:last-child) {
   margin-bottom: 0;
