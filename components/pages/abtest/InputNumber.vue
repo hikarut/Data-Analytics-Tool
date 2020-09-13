@@ -33,8 +33,8 @@ export default Vue.extend({
   },
   computed: {
     inputValue: {
-      get(): string {
-        return this.value
+      get(): number {
+        return Number(this.value)
       },
       set(value: number) {
         this.$emit('parentMethod', value)
@@ -42,7 +42,7 @@ export default Vue.extend({
     },
   },
   beforeMount() {
-    this.$emit('parentMethod', this.value)
+    this.$emit('parentMethod', Number(this.value))
   },
 })
 </script>

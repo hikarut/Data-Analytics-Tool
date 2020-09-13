@@ -81,6 +81,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
+// import { jStat } from 'jstat'
+const { jStat } = require('jstat')
 import InputNumber from '~/components/pages/abtest/InputNumber.vue'
 
 export default Vue.extend({
@@ -110,12 +112,43 @@ export default Vue.extend({
       console.log(this.bVisitors)
       console.log('this.bConversions')
       console.log(this.bConversions)
-      this.aCvr =
-        Math.round((this.aConversions / this.aVisitors) * 100 * 100) / 100
-      this.bCvr =
-        Math.round((this.bConversions / this.bVisitors) * 100 * 100) / 100
-      this.aWinLose = 'Win'
-      this.bWinLose = 'Lose'
+
+      const aCvr = this.aConversions / this.aVisitors
+      const bCvr = this.bConversions / this.bVisitors
+      this.aCvr = Math.round(aCvr * 100 * 100) / 100
+      this.bCvr = Math.round(bCvr * 100 * 100) / 100
+
+      const pool =
+        (this.aVisitors * aCvr + this.bVisitors * bCvr) /
+        (this.aVisitors + this.bVisitors)
+
+      const zValue =
+        (aCvr - bCvr) /
+        Math.sqrt(pool * (1 - pool) * (1 / this.aVisitors + 1 / this.bVisitors))
+      this.zValue = Math.round(zValue * 1000) / 1000
+
+      // z値、平均、標準偏差
+      let pValue = jStat.normal.cdf(zValue, 0, 1)
+      pValue = pValue > 0.5 ? 1 - pValue : pValue
+      this.pValue = Math.round(pValue * 1000) / 1000
+
+      this.aWinLose =
+        this.aCvr > this.bCvr && this.pValue < 0.05 ? 'Win' : 'Lose'
+      this.bWinLose =
+        this.aCvr > this.bCvr && this.pValue < 0.05 ? 'Lose' : 'Win'
+
+      if (this.aCvr > this.bCvr && this.pValue < 0.05) {
+        this.aWinLose = 'Win'
+        this.bWinLose = 'Lose'
+        this.uplift = Math.round((aCvr / bCvr) * 100 * 100) / 100
+      } else if (this.bCvr > this.aCvr && this.pValue < 0.05) {
+        this.aWinLose = 'Lose'
+        this.bWinLose = 'Win'
+        this.uplift = Math.round((bCvr / aCvr) * 100 * 100) / 100
+      } else {
+        this.aWinLose = 'Draw'
+        this.bWinLose = 'Draw'
+      }
     },
     setAVisitors(value: number) {
       console.log(value)
