@@ -26,16 +26,23 @@ export default Vue.extend({
       type: String,
       default: '',
     },
+    value: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     inputValue: {
-      get() {
-        return null
+      get(): string {
+        return this.value
       },
       set(value: number) {
         this.$emit('parentMethod', value)
       },
     },
+  },
+  beforeMount() {
+    this.$emit('parentMethod', this.value)
   },
 })
 </script>

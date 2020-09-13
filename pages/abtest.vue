@@ -19,11 +19,13 @@
                   <input-number
                     icon="fas fa-user"
                     placeholder="Visitors"
+                    value="80000"
                     @parentMethod="setAVisitors"
                   />
                   <input-number
                     icon="fas fa-heart"
                     placeholder="Conversions"
+                    value="1600"
                     @parentMethod="setAConversions"
                   />
                   <p class="center">Conversion rate</p>
@@ -42,11 +44,13 @@
                   <input-number
                     icon="fas fa-user"
                     placeholder="Visitors"
+                    value="80000"
                     @parentMethod="setBVisitors"
                   />
                   <input-number
                     icon="fas fa-heart"
                     placeholder="Conversions"
+                    value="1696"
                     @parentMethod="setBConversions"
                   />
                   <p class="center">Conversion rate</p>
