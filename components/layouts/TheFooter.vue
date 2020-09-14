@@ -12,10 +12,11 @@ export default Vue.extend({})
 </script>
 
 <style lang="scss" scoped>
+.content {
+  margin-top: 50px;
+}
 .footer {
-  // color: $whitesmoke;
   color: $dark;
-  // background-color: $dark;
-  background-color: $whitesmoke;
+  background-color: $white;
 }
 </style>

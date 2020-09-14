@@ -61,7 +61,7 @@
             </article>
           </div>
         </div>
-        <div class="statistics">
+        <div class="has-text-centered">
           <span class="statistics-value">p-value: {{ pValue }}</span>
           <span class="statistics-value">z-score: {{ zValue }}</span>
           <span class="statistics-value">uplift: {{ uplift }}%</span>
@@ -104,15 +104,6 @@ export default Vue.extend({
   }),
   methods: {
     check() {
-      console.log('this.aVisitors')
-      console.log(this.aVisitors)
-      console.log('this.aConversions')
-      console.log(this.aConversions)
-      console.log('this.bVisitors')
-      console.log(this.bVisitors)
-      console.log('this.bConversions')
-      console.log(this.bConversions)
-
       const aCvr = this.aConversions / this.aVisitors
       const bCvr = this.bConversions / this.bVisitors
       this.aCvr = Math.round(aCvr * 100 * 100) / 100
@@ -198,9 +189,6 @@ export default Vue.extend({
 }
 .Lose {
   // color: $gray;
-}
-.statistics {
-  text-align: center;
 }
 .statistics-value {
   font-size: 20px;
