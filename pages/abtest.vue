@@ -62,9 +62,15 @@
           </div>
         </div>
         <div class="has-text-centered">
-          <span class="statistics-value">p-value: {{ pValue }}</span>
-          <span class="statistics-value">z-score: {{ zValue }}</span>
-          <span class="statistics-value">uplift: {{ uplift }}%</span>
+          <span class="statistics-value" :class="[bWinLose, aWinLose]">
+            p-value: {{ pValue }}
+          </span>
+          <span class="statistics-value" :class="[bWinLose, aWinLose]">
+            z-score: {{ zValue }}
+          </span>
+          <span class="statistics-value" :class="[bWinLose, aWinLose]">
+            uplift: {{ uplift }}%
+          </span>
         </div>
       </div>
       <div class="check-button">
@@ -81,7 +87,6 @@
 
 <script lang="ts">
 import Vue from 'vue'
-// import { jStat } from 'jstat'
 const { jStat } = require('jstat')
 import InputNumber from '~/components/pages/abtest/InputNumber.vue'
 
@@ -142,7 +147,6 @@ export default Vue.extend({
       }
     },
     setAVisitors(value: number) {
-      console.log(value)
       this.aVisitors = value
     },
     setAConversions(value: number) {
@@ -163,7 +167,6 @@ export default Vue.extend({
   color: $blue;
 }
 .panel-heading {
-  // background-color: $orange;
   background-color: $dark;
   color: $white;
 }
