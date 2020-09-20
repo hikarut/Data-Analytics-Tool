@@ -89,6 +89,14 @@
 import Vue from 'vue'
 const { jStat } = require('jstat')
 import InputNumber from '~/components/pages/abtest/InputNumber.vue'
+import {
+  getCvr,
+  percentRound,
+  valueRound,
+  getPoolValue,
+  getZValue,
+  getPValue,
+} from '~/lib/statistics.ts'
 
 export default Vue.extend({
   components: {
@@ -109,24 +117,19 @@ export default Vue.extend({
   }),
   methods: {
     check() {
-      const aCvr = this.aConversions / this.aVisitors
-      const bCvr = this.bConversions / this.bVisitors
-      this.aCvr = Math.round(aCvr * 100 * 100) / 100
-      this.bCvr = Math.round(bCvr * 100 * 100) / 100
+      const aCvr = getCvr(this.aConversions, this.aVisitors)
+      const bCvr = getCvr(this.bConversions, this.bVisitors)
+      this.aCvr = percentRound(aCvr, 100)
+      this.bCvr = percentRound(bCvr, 100)
 
-      const pool =
-        (this.aVisitors * aCvr + this.bVisitors * bCvr) /
-        (this.aVisitors + this.bVisitors)
-
-      const zValue =
-        (aCvr - bCvr) /
-        Math.sqrt(pool * (1 - pool) * (1 / this.aVisitors + 1 / this.bVisitors))
-      this.zValue = Math.round(zValue * 1000) / 1000
+      const pool = getPoolValue(this.aVisitors, aCvr, this.bVisitors, bCvr)
+      const zValue = getZValue(this.aVisitors, aCvr, this.bVisitors, bCvr, pool)
+      this.zValue = valueRound(zValue, 1000)
 
       // z値、平均、標準偏差
-      let pValue = jStat.normal.cdf(zValue, 0, 1)
+      let pValue = getPValue(zValue)
       pValue = pValue > 0.5 ? 1 - pValue : pValue
-      this.pValue = Math.round(pValue * 1000) / 1000
+      this.pValue = valueRound(pValue, 1000)
 
       this.aWinLose =
         this.aCvr > this.bCvr && this.pValue < 0.05 ? 'Win' : 'Lose'
@@ -136,11 +139,11 @@ export default Vue.extend({
       if (this.aCvr > this.bCvr && this.pValue < 0.05) {
         this.aWinLose = 'Win'
         this.bWinLose = 'Lose'
-        this.uplift = Math.round((aCvr / bCvr) * 100 * 100) / 100
+        this.uplift = percentRound(aCvr / bCvr, 100)
       } else if (this.bCvr > this.aCvr && this.pValue < 0.05) {
         this.aWinLose = 'Lose'
         this.bWinLose = 'Win'
-        this.uplift = Math.round((bCvr / aCvr) * 100 * 100) / 100
+        this.uplift = percentRound(bCvr / aCvr, 100)
       } else {
         this.aWinLose = 'Draw'
         this.bWinLose = 'Draw'
