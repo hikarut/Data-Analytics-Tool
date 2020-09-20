@@ -1,5 +1,3 @@
-// const { jStat } = require('jstat')
-// import jStat from 'jstat.js'
 import jStat from 'jstat'
 
 /*

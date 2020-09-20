@@ -126,7 +126,6 @@ export default Vue.extend({
       const zValue = getZValue(this.aVisitors, aCvr, this.bVisitors, bCvr, pool)
       this.zValue = valueRound(zValue, 1000)
 
-      // z値、平均、標準偏差
       let pValue = getPValue(zValue)
       pValue = pValue > 0.5 ? 1 - pValue : pValue
       this.pValue = valueRound(pValue, 1000)
