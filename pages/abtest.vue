@@ -180,10 +180,13 @@ export default Vue.extend({
     },
     copy() {
       // URLのセット
-      this.url = `${process.env.conf.url}/abtest?va=${this.aVisitors}&vb=${this.bVisitors}&ca=${this.aConversions}&cb=${this.bConversions}`
-      // クリップボードにコピー
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(this.url)
+      if (process.env.conf !== undefined) {
+        const conf: any = process.env.conf
+        this.url = `${conf.url}/abtest?va=${this.aVisitors}&vb=${this.bVisitors}&ca=${this.aConversions}&cb=${this.bConversions}`
+        // クリップボードにコピー
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(this.url)
+        }
       }
     },
     setAVisitors(value: number) {
