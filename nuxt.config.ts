@@ -1,4 +1,6 @@
 // import constant from './config/constant.json'
+const environment = process.env.NODE_ENV || 'dev'
+const conf = require(`./config/constant.${environment}.json`)
 
 export default {
   mode: 'universal',
@@ -107,5 +109,12 @@ export default {
      ** You can extend webpack config here
      */
     // extend(config: any, ctx: any) {},
+  },
+
+  /*
+   ** env
+   */
+  env: {
+    conf: conf,
   },
 }

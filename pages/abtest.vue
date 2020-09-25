@@ -19,13 +19,13 @@
                   <input-number
                     icon="fas fa-user"
                     placeholder="Visitors"
-                    value="80000"
+                    :value="defaultAVisitors"
                     @parentMethod="setAVisitors"
                   />
                   <input-number
                     icon="fas fa-heart"
                     placeholder="Conversions"
-                    value="1600"
+                    :value="defaultAConversions"
                     @parentMethod="setAConversions"
                   />
                   <p class="center">Conversion rate</p>
@@ -44,13 +44,13 @@
                   <input-number
                     icon="fas fa-user"
                     placeholder="Visitors"
-                    value="80000"
+                    :value="defaultBVisitors"
                     @parentMethod="setBVisitors"
                   />
                   <input-number
                     icon="fas fa-heart"
                     placeholder="Conversions"
-                    value="1696"
+                    :value="defaultBConversions"
                     @parentMethod="setBConversions"
                   />
                   <p class="center">Conversion rate</p>
@@ -81,6 +81,12 @@
           Check
         </button>
       </div>
+      <div class="check-button">
+        <button class="button is-large is-fullwidth" @click="copy()">
+          Copy and Share URL
+        </button>
+        <p class="url has-text-centered">{{ url }}</p>
+      </div>
     </div>
   </section>
 </template>
@@ -103,6 +109,10 @@ export default Vue.extend({
     InputNumber,
   },
   data: () => ({
+    defaultAVisitors: 80000,
+    defaultBVisitors: 80000,
+    defaultAConversions: 1600,
+    defaultBConversions: 1696,
     aVisitors: 0,
     bVisitors: 0,
     aConversions: 0,
@@ -114,7 +124,27 @@ export default Vue.extend({
     pValue: 0,
     zValue: 0,
     uplift: 0,
+    url: '',
   }),
+  beforeMount() {
+    // パラメータからデフォルト値をセット
+    if (/^\d+$/.test(String(this.$route.query.va))) {
+      this.defaultAVisitors = Number(this.$route.query.va)
+    }
+    if (/^\d+$/.test(String(this.$route.query.vb))) {
+      this.defaultBVisitors = Number(this.$route.query.vb)
+    }
+    if (/^\d+$/.test(String(this.$route.query.ca))) {
+      this.defaultAConversions = Number(this.$route.query.ca)
+    }
+    if (/^\d+$/.test(String(this.$route.query.cb))) {
+      this.defaultBConversions = Number(this.$route.query.cb)
+    }
+  },
+  mounted() {
+    // デフォルトの計算結果を表示させる
+    this.check()
+  },
   methods: {
     check() {
       const aCvr = getCvr(this.aConversions, this.aVisitors)
@@ -146,6 +176,14 @@ export default Vue.extend({
       } else {
         this.aWinLose = 'Draw'
         this.bWinLose = 'Draw'
+      }
+    },
+    copy() {
+      // URLのセット
+      this.url = `${process.env.conf.url}/abtest?va=${this.aVisitors}&vb=${this.bVisitors}&ca=${this.aConversions}&cb=${this.bConversions}`
+      // クリップボードにコピー
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(this.url)
       }
     },
     setAVisitors(value: number) {
@@ -203,5 +241,8 @@ export default Vue.extend({
 .center {
   text-align: center;
   margin-top: 20px;
+}
+.url {
+  margin-top: 10px;
 }
 </style>
