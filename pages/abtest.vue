@@ -85,7 +85,9 @@
         <button class="button is-large is-fullwidth" @click="copy()">
           Copy and Share URL
         </button>
-        <p class="url has-text-centered">{{ url }}</p>
+        <p class="url has-text-centered">
+          <a :href="url" target="_blank">{{ url }}</a>
+        </p>
       </div>
     </div>
   </section>
@@ -176,6 +178,7 @@ export default Vue.extend({
       } else {
         this.aWinLose = 'Draw'
         this.bWinLose = 'Draw'
+        this.uplift = 0
       }
     },
     copy() {

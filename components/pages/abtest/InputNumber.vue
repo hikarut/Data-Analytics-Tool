@@ -36,8 +36,8 @@ export default Vue.extend({
       get(): number {
         return Number(this.value)
       },
-      set(value: number) {
-        this.$emit('parentMethod', value)
+      set(value: string) {
+        this.$emit('parentMethod', Number(value))
       },
     },
   },
