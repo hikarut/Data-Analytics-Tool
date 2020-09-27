@@ -56,6 +56,12 @@ export default {
         href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css',
       },
     ],
+    script: [
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-CVKRSXE7DB',
+        async: true,
+      },
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -72,10 +78,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  // plugins: [
-  //   { src: '~/plugins/ga.js', mode: 'client' },
-  //   { src: '~/plugins/lazyload.js', mode: 'client' }
-  // ],
+  plugins: [{ src: '~/plugins/ga.js', mode: 'client' }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -115,6 +118,7 @@ export default {
    */
   env: {
     conf: conf,
+    environment: environment,
   },
 
   /*

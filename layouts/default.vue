@@ -35,4 +35,9 @@ export default Vue.extend({
 .main-column {
   min-height: 100vh;
 }
+@media screen and (max-width: 768px) {
+  .side-menu {
+    visibility: hidden;
+  }
+}
 </style>

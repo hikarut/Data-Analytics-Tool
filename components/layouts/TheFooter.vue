@@ -16,8 +16,8 @@ export default Vue.extend({})
   margin-top: 50px;
 }
 .footer {
-  height: 100px;
   color: $dark;
   background-color: $white;
+  padding: 1rem 0.5rem 1rem;
 }
 </style>
