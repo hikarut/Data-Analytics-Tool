@@ -27,10 +27,10 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://yahoo.co.jp/',
+        content: conf.url,
       },
       { hid: 'og:title', property: 'og:title', content: 'Data Analytics Tool' },
-      { hid: 'og:url', property: 'og:url', content: 'https://yahoo.co.jp/' },
+      { hid: 'og:url', property: 'og:url', content: conf.url },
       {
         hid: 'og:description',
         property: 'og:description',
@@ -116,5 +116,15 @@ export default {
    */
   env: {
     conf: conf,
+  },
+
+  /*
+   ** sitemap作成オプション
+   */
+  sitemap: {
+    // path: '/sitemap.xml',
+    hostname: conf.url,
+    generate: true,
+    exclude: ['/404', 'ads.txt'],
   },
 }
