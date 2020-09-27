@@ -20,7 +20,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'データ分析ツール',
+        content: 'ノーコードで使えるデータ分析ツール',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -33,7 +33,7 @@ export default {
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'データ分析ツール',
+        content: 'ノーコードで使えるデータ分析ツール',
       },
       {
         hid: 'twitter:card',

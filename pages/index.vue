@@ -14,12 +14,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({
-  beforeMount() {
-    console.log(111)
-    console.log(window.parent.screen.height)
-  },
-})
+export default Vue.extend({})
 </script>
 
 <style lang="scss" scoped>
