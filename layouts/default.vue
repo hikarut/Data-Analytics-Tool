@@ -33,6 +33,6 @@ export default Vue.extend({
   margin-bottom: 0;
 }
 .main-column {
-  min-height: 720px;
+  min-height: 100vh;
 }
 </style>

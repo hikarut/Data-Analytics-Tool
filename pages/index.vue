@@ -2,8 +2,10 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title">Hero title</h1>
-        <h2 class="subtitle">Hero subtitle</h2>
+        <div class="has-text-centered">
+          <img src="ogimage.png" width="400px" />
+        </div>
+        <p class="has-text-centered">ノーコードで使えるデータ分析ツール</p>
       </div>
     </div>
   </section>
@@ -15,6 +17,7 @@ import Vue from 'vue'
 export default Vue.extend({
   beforeMount() {
     console.log(111)
+    console.log(window.parent.screen.height)
   },
 })
 </script>

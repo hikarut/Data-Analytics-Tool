@@ -1,4 +1,3 @@
-// import constant from './config/constant.json'
 const environment = process.env.NODE_ENV || 'dev'
 const conf = require(`./config/constant.${environment}.json`)
 
@@ -16,7 +15,7 @@ export default {
         hid: 'keywords',
         name: 'keywords',
         content:
-          'データサイエンティスト,データアナリスト,データエンジニア,データ分析,ツール',
+          'データサイエンティスト,データアナリスト,データエンジニア,データ分析,ツール,ノーコード',
       },
       {
         hid: 'description',
