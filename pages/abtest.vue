@@ -205,6 +205,37 @@ export default Vue.extend({
       this.bConversions = value
     },
   },
+  head() {
+    if (process.env.conf !== undefined) {
+    }
+    return {
+      title: 'AB Test Tool',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'ABテストの有意差判定ツール',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'ABテストの有意差判定ツール',
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'AB Test Tool',
+        },
+      ],
+      link: [
+        {
+          rel: 'canonical',
+          // TODO:confファイルから見る。
+          href: 'https://data-analytics-tool.com/abtest',
+        },
+      ],
+    }
+  },
 })
 </script>
 

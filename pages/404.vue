@@ -2,10 +2,10 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <div class="has-text-centered">
-          <img src="ogimage.png" width="400px" />
-        </div>
-        <p class="has-text-centered">ノーコードで使えるデータ分析ツール</p>
+        <p class="has-text-centered">Error</p>
+        <p class="has-text-centered error-message">
+          <nuxt-link to="/">Top</nuxt-link>に戻る
+        </p>
       </div>
     </div>
   </section>
@@ -18,7 +18,7 @@ export default Vue.extend({})
 </script>
 
 <style lang="scss" scoped>
-.title {
-  color: $blue;
+.error-message {
+  margin-top: 10px;
 }
 </style>

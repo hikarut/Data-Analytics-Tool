@@ -1,6 +1,6 @@
 <template>
   <aside class="menu">
-    <p class="header">Data Analytics Tool</p>
+    <p class="header"><nuxt-link to="/">Data Analytics Tool</nuxt-link></p>
     <ul class="menu-list">
       <li><nuxt-link to="/">Top</nuxt-link></li>
       <li><nuxt-link to="/abtest">AB Test</nuxt-link></li>
@@ -24,11 +24,15 @@ export default Vue.extend({})
 .menu-list {
   margin: 10px;
 }
+.header a,
 .menu-list li a {
   color: $white;
 }
 .menu-list a:hover {
   background-color: $dark;
   color: $orange;
+}
+.header a:hover {
+  background-color: $dark;
 }
 </style>

@@ -1,4 +1,3 @@
-// import constant from './config/constant.json'
 const environment = process.env.NODE_ENV || 'dev'
 const conf = require(`./config/constant.${environment}.json`)
 
@@ -16,25 +15,25 @@ export default {
         hid: 'keywords',
         name: 'keywords',
         content:
-          'データサイエンティスト,データアナリスト,データエンジニア,データ分析,ツール',
+          'データサイエンティスト,データアナリスト,データエンジニア,データ分析,ツール,ノーコード',
       },
       {
         hid: 'description',
         name: 'description',
-        content: 'データ分析ツール',
+        content: 'ノーコードで使えるデータ分析ツール',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: conf.url,
+        content: `${conf.url}/ogimage.png`,
       },
       { hid: 'og:title', property: 'og:title', content: 'Data Analytics Tool' },
       { hid: 'og:url', property: 'og:url', content: conf.url },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: 'データ分析ツール',
+        content: 'ノーコードで使えるデータ分析ツール',
       },
       {
         hid: 'twitter:card',
