@@ -27,7 +27,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: conf.url,
+        content: `${conf.url}/ogimage.png`,
       },
       { hid: 'og:title', property: 'og:title', content: 'Data Analytics Tool' },
       { hid: 'og:url', property: 'og:url', content: conf.url },
