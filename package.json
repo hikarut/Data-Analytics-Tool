@@ -5,7 +5,7 @@
     "author": "hikarut",
     "private": true,
     "scripts": {
-        "dev": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV='dev' nuxt-ts",
+        "dev": "cross-env NODE_ENV='dev' nuxt-ts",
         "preview": "cross-env NODE_ENV='preview' nuxt-ts",
         "prod": "cross-env NODE_ENV='prod' nuxt-ts",
         "build": "nuxt-ts build",
