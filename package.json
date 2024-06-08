@@ -5,14 +5,14 @@
     "author": "hikarut",
     "private": true,
     "scripts": {
-        "dev": "cross-env NODE_ENV='dev' nuxt-ts",
-        "preview": "cross-env NODE_ENV='preview' nuxt-ts",
-        "prod": "cross-env NODE_ENV='prod' nuxt-ts",
-        "build": "nuxt-ts build",
-        "start": "nuxt-ts start",
-        "generate:dev": "cross-env NODE_ENV='dev' nuxt-ts generate",
-        "generate:preview": "cross-env NODE_ENV='preview' nuxt-ts generate",
-        "generate:prod": "cross-env NODE_ENV='prod' nuxt-ts generate",
+        "dev": "cross-env NODE_ENV='dev' nuxt",
+        "preview": "cross-env NODE_ENV='preview' nuxt",
+        "prod": "cross-env NODE_ENV='prod' nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate:dev": "cross-env NODE_ENV='dev' nuxt generate",
+        "generate:preview": "cross-env NODE_ENV='preview' nuxt generate",
+        "generate:prod": "cross-env NODE_ENV='prod' nuxt generate",
         "test": "jest"
     },
     "dependencies": {
