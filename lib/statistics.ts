@@ -1,4 +1,4 @@
-import { jStat } from 'jstat'
+import jStat from 'jstat'
 
 /*
  * CVRの取得
@@ -78,5 +78,6 @@ export function getZValue(
  */
 export function getPValue(zValue: number): number {
   // z値、平均、標準偏差
+  // @ts-ignore: This line will be ignored by TypeScript compiler
   return jStat.normal.cdf(zValue, 0, 1)
 }
