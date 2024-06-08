@@ -1,9 +1,9 @@
-declare module "*.js" {
+declare module '*.js' {
   // const value: any
   // export default value
 }
 
-declare module "jstat" {
+declare module 'jstat' {
   // const value: any
   // export default value
 }
