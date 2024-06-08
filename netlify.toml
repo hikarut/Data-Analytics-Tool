@@ -8,4 +8,4 @@
   command = "npm run generate:dev"
 
 [build]
-  node_version = "14"
+  node_version = "18"
