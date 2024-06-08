@@ -66,8 +66,7 @@
                 target="_blank"
                 class="button is-primary mt-4"
               >資料確認</a
-              </div
-              >
+              </div>
             </div>
           </div>
         </div>
