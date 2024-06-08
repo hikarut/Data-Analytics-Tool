@@ -53,20 +53,24 @@
         <div class="columns">
           <div class="column">
             <div class="has-text-centered">
-              <figure class="image is-256x256 mb-3 is-inline-block document-image">
-                <a href="https://speakerdeck.com/hikarut/detafen-xi-li-wogao-merusqlyan-xiu-sabisu-sql-everyone" target="_blank">
+              <figure
+                class="image is-256x256 mb-3 is-inline-block document-image"
+              >
+                <a
+                  href="https://speakerdeck.com/hikarut/detafen-xi-li-wogao-merusqlyan-xiu-sabisu-sql-everyone"
+                  target="_blank"
+                >
                   <img src="/document.jpeg" alt="資料" />
                 </a>
               </figure>
-              <p>
-                詳細資料については以下からご確認いただけます。
-              </p>
+              <p>詳細資料については以下からご確認いただけます。</p>
               <a
                 href="https://speakerdeck.com/hikarut/detafen-xi-li-wogao-merusqlyan-xiu-sabisu-sql-everyone"
                 target="_blank"
                 class="button is-primary mt-4"
-              >資料確認</a
-              </div>
+              >
+                資料確認
+              </a>
             </div>
           </div>
         </div>
@@ -154,7 +158,8 @@
               著書：<a
                 href="https://www.amazon.co.jp/dp/4297134438/"
                 target="_blank"
-              >『データ分析力を高めるビジネスパーソンのためのSQL入門』</a>
+                >『データ分析力を高めるビジネスパーソンのためのSQL入門』</a
+              >
             </p>
           </div>
         </div>
@@ -172,7 +177,9 @@
                 <h3 class="title has-text-white is-5 mb-0">標準プラン</h3>
               </div>
               <div class="box-content content">
-                <p class="is-size-6 has-text-weight-bold text-heading">対象者</p>
+                <p class="is-size-6 has-text-weight-bold text-heading">
+                  対象者
+                </p>
                 <p class="is-size-6">SQL初学者</p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">教材</p>
@@ -180,7 +187,8 @@
                   <a
                     href="https://www.amazon.co.jp/dp/4297134438/"
                     target="_blank"
-                  >『データ分析力を高めるビジネスパーソンのためのSQL入門』</a>
+                    >『データ分析力を高めるビジネスパーソンのためのSQL入門』</a
+                  >
                 </p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">形式</p>
@@ -205,7 +213,9 @@
                 </h3>
               </div>
               <div class="box-content content">
-                <p class="is-size-6 has-text-weight-bold text-heading">対象者</p>
+                <p class="is-size-6 has-text-weight-bold text-heading">
+                  対象者
+                </p>
                 <p class="is-size-6">SQL初学者</p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">教材</p>
@@ -242,7 +252,9 @@
           <div
             class="column is-12-mobile has-text-centered-mobile has-text-left-tablet"
           >
-            <a href="mailto:ht.hikaru.takahashi@gmail.com">ht.hikaru.takahashi@gmail.com</a>
+            <a href="mailto:ht.hikaru.takahashi@gmail.com"
+              >ht.hikaru.takahashi@gmail.com</a
+            >
             <a href="https://x.com/light940" target="_blank" class="ml-4">
               <img
                 src="/logo-white.png"
@@ -272,9 +284,9 @@ export default Vue.extend({
   }),
   head() {
     return {
-      title: "データ分析を高めるSQL研修『SQL Everyone』"
-    };
-  }
+      title: 'データ分析を高めるSQL研修『SQL Everyone』',
+    }
+  },
 })
 </script>
 
