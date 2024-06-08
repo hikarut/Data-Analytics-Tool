@@ -78,5 +78,5 @@ export function getZValue(
  */
 export function getPValue(zValue: number): number {
   // z値、平均、標準偏差
-  return jStat.normal.cdf(zValue, 0, 1) 
+  return jStat.normal.cdf(zValue, 0, 1)
 }

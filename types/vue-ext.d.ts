@@ -4,6 +4,8 @@ declare module '*.js' {
 }
 
 declare module 'jstat' {
-  const value: any
-  export default value
+  // const value: any
+  // export default value
+  import type { jStat } from 'jstat'
+  export default jStat
 }
