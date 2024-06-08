@@ -1,4 +1,10 @@
 {
-  "semi": false,
-  "singleQuote": true
+  "singleQuote": true,
+  "semi": true,
+  "rules": {
+    "prettier/prettier": ["warn", {
+      "singleQuote": false,
+      "trailingComma": "none"
+    }]
+  }
 }
