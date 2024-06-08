@@ -11,7 +11,7 @@
         "build": "NODE_OPTIONS=--openssl-legacy-provider nuxt-ts build",
         "start": "NODE_OPTIONS=--openssl-legacy-provider nuxt-ts start",
         "generate:dev": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV='dev' nuxt-ts generate",
-        "generate:preview": "NODE_OPTIONS='--openssl-legacy-provider' cross-env NODE_ENV='preview' nuxt-ts generate",
+        "generate:preview": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV='preview' nuxt-ts generate",
         "generate:prod": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV='prod' nuxt-ts generate",
         "test": "jest"
     },
