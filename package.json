@@ -6,13 +6,13 @@
     "private": true,
     "scripts": {
         "dev": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV='dev' nuxt-ts",
-        "preview": "cross-env NODE_ENV='preview' nuxt-ts",
-        "prod": "cross-env NODE_ENV='prod' nuxt-ts",
-        "build": "nuxt-ts build",
-        "start": "nuxt-ts start",
-        "generate:dev": "cross-env NODE_ENV='dev' nuxt-ts generate",
-        "generate:preview": "cross-env NODE_ENV='preview' nuxt-ts generate",
-        "generate:prod": "cross-env NODE_ENV='prod' nuxt-ts generate",
+        "preview": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV='preview' nuxt-ts",
+        "prod": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV='prod' nuxt-ts",
+        "build": "NODE_OPTIONS=--openssl-legacy-provider nuxt-ts build",
+        "start": "NODE_OPTIONS=--openssl-legacy-provider nuxt-ts start",
+        "generate:dev": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV='dev' nuxt-ts generate",
+        "generate:preview": "NODE_OPTIONS='--openssl-legacy-provider' cross-env NODE_ENV='preview' nuxt-ts generate",
+        "generate:prod": "NODE_OPTIONS=--openssl-legacy-provider cross-env NODE_ENV='prod' nuxt-ts generate",
         "test": "jest"
     },
     "dependencies": {
