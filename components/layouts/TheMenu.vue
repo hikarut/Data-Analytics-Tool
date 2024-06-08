@@ -27,9 +27,10 @@ export default Vue.extend({})
 .header a,
 .menu-list li a {
   color: $white;
+  background-color: $dark;
 }
 .menu-list a:hover {
-  background-color: $dark;
+  // background-color: $dark;
   color: $orange;
 }
 .header a:hover {

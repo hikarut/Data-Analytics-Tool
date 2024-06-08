@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="content has-text-centered">
-      <p>© 2020 Data Analytics Tool</p>
+      <p>© 2024 Data Analytics Tool</p>
     </div>
   </footer>
 </template>
