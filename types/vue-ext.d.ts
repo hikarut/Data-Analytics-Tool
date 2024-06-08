@@ -6,11 +6,9 @@ declare module '*.js' {
 declare module 'jstat' {
   // const value: any
   // export default value
-  const jStat: {
+  export const jStat: {
     normal: {
       cdf: (value: number, mean: number, standardDeviation: number) => number;
     };
   };
-
-  export = jStat;
 }
