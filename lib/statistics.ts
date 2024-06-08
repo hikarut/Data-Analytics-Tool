@@ -1,4 +1,4 @@
-import { jStat } from 'jstat'
+import jStat from 'jstat'
 
 /*
  * CVRの取得
