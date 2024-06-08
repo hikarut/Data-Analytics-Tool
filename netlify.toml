@@ -5,7 +5,7 @@
   command = "npm run generate:preview"
 
 [context.branch-deploy]
-  command = "NUXT_BUILD_IGNORE_WARNINGS=true npm run generate:dev"
+  command = "npm run generate:dev"
 
 [build]
   node_version = "18.17.1"
