@@ -271,6 +271,11 @@ export default Vue.extend({
   data: () => ({
     date: new Date().getFullYear(),
   }),
+  head() {
+    return {
+      title: "データ分析を高めるSQL研修『SQL Everyone』"
+    };
+  }
 })
 </script>
 
