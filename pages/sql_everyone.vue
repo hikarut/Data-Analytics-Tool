@@ -16,6 +16,7 @@
           href="https://forms.gle/CFKuJCcG81J5EwVA6"
           target="_blank"
           class="button is-primary mt-4"
+          @click="trackInquiryEvent"
         >
           無料でお問い合わせ
         </a>
@@ -74,6 +75,7 @@
                 href="https://speakerdeck.com/hikarut/detafen-xi-li-wogao-merusqlyan-xiu-sabisu-sql-everyone"
                 target="_blank"
                 class="button is-primary mt-4"
+                @click="trackShowDocumentEvent"
               >
                 資料確認
               </a>
@@ -96,7 +98,7 @@
                 <img src="/pc.png" alt="特徴1" />
               </figure>
               <p>
-                ただ説明を聞くだけではなくPCでSQLを実行できる環境を用意して実際にSQLを実行しながら進める（環境構築もサポート）
+                ただ説明を聞くだけではなくPCでSQLを実行できる環境を用意して実際にSQLを実行しながらハンズオン形式で進める（環境構築もサポート）
               </p>
             </div>
           </div>
@@ -256,6 +258,7 @@
             href="https://forms.gle/CFKuJCcG81J5EwVA6"
             target="_blank"
             class="button is-primary mt-4"
+            @click="trackInquiryEvent"
           >
             無料でお問い合わせ
           </a>
@@ -294,6 +297,26 @@ export default Vue.extend({
   data: () => ({
     date: new Date().getFullYear(),
   }),
+  methods: {
+    trackInquiryEvent() {
+      if (window && window.gtag) {
+        window.gtag('event', 'click', {
+          event_category: 'inquiry',
+          event_label: 'free_inquiry',
+          value: 1,
+        })
+      }
+    },
+    trackShowDocumentEvent() {
+      if (window && window.gtag) {
+        window.gtag('event', 'click', {
+          event_category: 'document',
+          event_label: 'show_document',
+          value: 1,
+        })
+      }
+    },
+  },
   head() {
     return {
       title: 'データ分析を高めるSQL研修『SQL Everyone』',
