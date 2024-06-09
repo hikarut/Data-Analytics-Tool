@@ -104,7 +104,7 @@ import {
   getPoolValue,
   getZValue,
   getPValue,
-} from '~/lib/statistics.ts'
+} from '~/lib/statistics'
 
 export default Vue.extend({
   components: {

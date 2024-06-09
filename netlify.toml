@@ -6,3 +6,6 @@
 
 [context.branch-deploy]
   command = "npm run generate:dev"
+
+[build]
+  node_version = "18.17.1"
