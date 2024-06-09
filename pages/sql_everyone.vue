@@ -12,7 +12,13 @@
           『SQL
           Everyone』は企業向けのSQL研修サービスです。『全ての人にデータ分析力』をというミッションのもと、データ分析で使うためのSQLを学習できるように基礎からサポートします。
         </p>
-        <button class="button is-primary mt-4">無料で問い合わせ</button>
+        <a
+          href="https://forms.gle/CFKuJCcG81J5EwVA6"
+          target="_blank"
+          class="button is-primary mt-4"
+        >
+          無料でお問い合わせ
+        </a>
       </div>
     </section>
 
@@ -246,7 +252,13 @@
           <h2 class="title is-4 has-text-white">
             SQL Everyoneに関してまずは無料でお問い合わせ
           </h2>
-          <button class="button is-primary mt-4">無料で問い合わせ</button>
+          <a
+            href="https://forms.gle/CFKuJCcG81J5EwVA6"
+            target="_blank"
+            class="button is-primary mt-4"
+          >
+            無料でお問い合わせ
+          </a>
         </div>
         <div class="columns is-mobile is-multiline mt-6">
           <div
@@ -285,6 +297,55 @@ export default Vue.extend({
   head() {
     return {
       title: 'データ分析を高めるSQL研修『SQL Everyone』',
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'SQL,研修,法人向け,勉強会,データ分析,データサイエンティスト,データアナリスト,データエンジニア,マーケター,営業,ビジネスパーソン',
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '『SQL Everyone』は企業向けのSQL研修サービスです。データ分析力を高めるために最も効果が高く学習効率も良いのが『SQL』です。SQLはエンジニアが使う難しいスキルだと思っている方が多いと思います。しかしデータ分析で使うSQLは短期間でも十分に実務として使えるレベルで身につけることができます。SQLを全く知らない人が受けてもデータ分析で使えるSQLが学べるように、短期間でハンズオンを実施しながら効率よくSQLを学ぶ研修となっています。',
+        },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: `https://data-analytics-tool.com/document.jpeg`,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'データ分析を高めるSQL研修『SQL Everyone』',
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://data-analytics-tool.com/',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: 'データ分析を高めるSQL研修『SQL Everyone』',
+        },
+        {
+          hid: 'twitter:card',
+          property: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          name: 'application-name',
+          content: 'データ分析を高めるSQL研修『SQL Everyone』',
+        },
+        {
+          name: 'apple-mobile-web-app-title',
+          content: 'データ分析を高めるSQL研修『SQL Everyone』',
+        },
+      ],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/sql_icon.png' }],
     }
   },
 })
