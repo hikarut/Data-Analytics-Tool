@@ -167,6 +167,7 @@
               <a
                 href="https://www.amazon.co.jp/dp/4297134438/"
                 target="_blank"
+              >
                 『データ分析力を高めるビジネスパーソンのためのSQL入門』
               </a>
             </p>
@@ -196,6 +197,7 @@
                   <a
                     href="https://www.amazon.co.jp/dp/4297134438/"
                     target="_blank"
+                  >
                     『データ分析力を高めるビジネスパーソンのためのSQL入門』
                   </a>
                 </p>
