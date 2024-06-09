@@ -135,6 +135,7 @@
             <figure class="is-inline-block is-centered image profile-image">
               <img class="profile-img" src="/profile.jpg" alt="講師画像" />
             </figure>
+            <p class="has-text-weight-bold mt-3">高橋 光</p>
           </div>
           <div class="column">
             <p>
