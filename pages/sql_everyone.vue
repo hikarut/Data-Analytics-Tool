@@ -166,7 +166,7 @@
               著書：<a
                 href="https://www.amazon.co.jp/dp/4297134438/"
                 target="_blank"
-                >『データ分析力を高めるビジネスパーソンのためのSQL入門』</a
+              >『データ分析力を高めるビジネスパーソンのためのSQL入門』</a
               >
             </p>
           </div>
@@ -195,7 +195,7 @@
                   <a
                     href="https://www.amazon.co.jp/dp/4297134438/"
                     target="_blank"
-                    >『データ分析力を高めるビジネスパーソンのためのSQL入門』</a
+                  >『データ分析力を高めるビジネスパーソンのためのSQL入門』</a
                   >
                 </p>
                 <hr />
@@ -268,7 +268,7 @@
             class="column is-12-mobile has-text-centered-mobile has-text-left-tablet"
           >
             <a href="mailto:ht.hikaru.takahashi@gmail.com"
-              >ht.hikaru.takahashi@gmail.com</a
+            >ht.hikaru.takahashi@gmail.com</a
             >
             <a href="https://x.com/light940" target="_blank" class="ml-4">
               <img
@@ -298,6 +298,7 @@ export default Vue.extend({
     date: new Date().getFullYear(),
   }),
   methods: {
+    // @ts-ignore: This line will be ignored by TypeScript compiler
     trackInquiryEvent() {
       if (window && window.gtag) {
         window.gtag('event', 'click', {
@@ -307,6 +308,7 @@ export default Vue.extend({
         })
       }
     },
+    // @ts-ignore: This line will be ignored by TypeScript compiler
     trackShowDocumentEvent() {
       if (window && window.gtag) {
         window.gtag('event', 'click', {
