@@ -3,6 +3,7 @@
     <p class="header"><nuxt-link to="/">Data Analytics Tool</nuxt-link></p>
     <ul class="menu-list">
       <li><nuxt-link to="/">Top</nuxt-link></li>
+      <li><nuxt-link to="/sql_everyone">SQL</nuxt-link></li>
       <li><nuxt-link to="/abtest">AB Test</nuxt-link></li>
     </ul>
   </aside>

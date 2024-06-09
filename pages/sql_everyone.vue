@@ -336,7 +336,7 @@ export default Vue.extend({
           hid: 'description',
           name: 'description',
           content:
-            '『SQL Everyone』は企業向けのSQL研修サービスです。データ分析力を高めるために最も効果が高く学習効率も良いのが『SQL』です。SQLはエンジニアが使う難しいスキルだと思っている方が多いと思います。しかしデータ分析で使うSQLは短期間でも十分に実務として使えるレベルで身につけることができます。SQLを全く知らない人が受けてもデータ分析で使えるSQLが学べるように、短期間でハンズオンを実施しながら効率よくSQLを学ぶ研修となっています。',
+            '『SQL Everyone』は企業向けのSQL研修サービスです。データ分析力を高めるために最も効果が高く学習効率も良いのが『SQL』です。SQLを全く知らない人が受けてもデータ分析で使えるSQLが学べるように、短期間でハンズオンを実施しながら効率よくSQLを学ぶ研修となっています。',
         },
         { hid: 'og:type', property: 'og:type', content: 'website' },
         {
@@ -357,7 +357,8 @@ export default Vue.extend({
         {
           hid: 'og:description',
           property: 'og:description',
-          content: 'データ分析を高めるSQL研修『SQL Everyone』',
+          content:
+            '『SQL Everyone』は企業向けのSQL研修サービスです。データ分析力を高めるために最も効果が高く学習効率も良いのが『SQL』です。SQLを全く知らない人が受けてもデータ分析で使えるSQLが学べるように、短期間でハンズオンを実施しながら効率よくSQLを学ぶ研修となっています。',
         },
         {
           hid: 'twitter:card',
