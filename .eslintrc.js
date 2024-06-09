@@ -35,6 +35,7 @@ module.exports = {
       'printWidth': 80
     }],
     'vue/no-parsing-error': 'off',  // この行を追加してエラールールを無効化
-    'vue/html-closing-bracket-newline': 'off'  // この行を追加
+    'vue/html-closing-bracket-newline': 'off',  // この行を追加
+    'vue/no-parsing-error': 'off',
   }
 }

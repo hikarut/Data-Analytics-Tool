@@ -163,7 +163,8 @@
           </div>
           <div class="column is-half mt-6">
             <p class="has-text-weight-bold">
-              著書：<a
+              著書：
+              <a
                 href="https://www.amazon.co.jp/dp/4297134438/"
                 target="_blank"
                 『データ分析力を高めるビジネスパーソンのためのSQL入門』
@@ -196,7 +197,6 @@
                     href="https://www.amazon.co.jp/dp/4297134438/"
                     target="_blank"
                     『データ分析力を高めるビジネスパーソンのためのSQL入門』
-                    </a>
                   </a>
                 </p>
                 <hr />
