@@ -165,8 +165,9 @@
             <p class="has-text-weight-bold">
               著書：<a
                 href="https://www.amazon.co.jp/dp/4297134438/"
-                target="_blank">
-                  『データ分析力を高めるビジネスパーソンのためのSQL入門』
+                target="_blank"
+                『データ分析力を高めるビジネスパーソンのためのSQL入門』
+                </a>
               </a>
             </p>
           </div>
@@ -194,8 +195,9 @@
                 <p class="is-size-6">
                   <a
                     href="https://www.amazon.co.jp/dp/4297134438/"
-                    target="_blank">
-                      『データ分析力を高めるビジネスパーソンのためのSQL入門』
+                    target="_blank"
+                    『データ分析力を高めるビジネスパーソンのためのSQL入門』
+                    </a>
                   </a>
                 </p>
                 <hr />
@@ -267,7 +269,9 @@
           <div
             class="column is-12-mobile has-text-centered-mobile has-text-left-tablet"
           >
-            <a href="mailto:ht.hikaru.takahashi@gmail.com">ht.hikaru.takahashi@gmail.com</a>
+            <a href="mailto:ht.hikaru.takahashi@gmail.com"
+            >ht.hikaru.takahashi@gmail.com</a
+            >
             <a href="https://x.com/light940" target="_blank" class="ml-4">
               <img
                 src="/logo-white.png"
