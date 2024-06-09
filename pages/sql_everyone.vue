@@ -191,7 +191,10 @@
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">教材</p>
                 <p class="is-size-6">
-                  <a href="https://www.amazon.co.jp/dp/4297134438/" target="_blank">
+                  <a
+                    href="https://www.amazon.co.jp/dp/4297134438/"
+                    target="_blank"
+                  >
                     『データ分析力を高めるビジネスパーソンのためのSQL入門』
                   </a>
                 </p>
