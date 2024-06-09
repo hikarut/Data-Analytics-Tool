@@ -298,9 +298,10 @@ export default Vue.extend({
     date: new Date().getFullYear(),
   }),
   methods: {
-    // @ts-ignore: This line will be ignored by TypeScript compiler
     trackInquiryEvent() {
+      // @ts-ignore: This line will be ignored by TypeScript compiler
       if (window && window.gtag) {
+        // @ts-ignore: This line will be ignored by TypeScript compiler
         window.gtag('event', 'click', {
           event_category: 'inquiry',
           event_label: 'free_inquiry',
@@ -308,9 +309,10 @@ export default Vue.extend({
         })
       }
     },
-    // @ts-ignore: This line will be ignored by TypeScript compiler
     trackShowDocumentEvent() {
+      // @ts-ignore: This line will be ignored by TypeScript compiler
       if (window && window.gtag) {
+        // @ts-ignore: This line will be ignored by TypeScript compiler
         window.gtag('event', 'click', {
           event_category: 'document',
           event_label: 'show_document',
