@@ -36,13 +36,11 @@
           <div class="column is-half">
             <p>
               『SQL Everyone』は企業向けのSQL研修サービスです。<br />
-              変化の激しい時代を生き抜くためには企業としてデータ分析力を高める必要があります。
+              データ分析の内製化を進めるための第一歩として『SQL』を学ぶことが最も学習効率が良いと考えています。
+              <!-- 変化の激しい時代を生き抜くためには企業としてデータ分析力を高める必要があります。その中でも最も学習効率が良いのが『SQL』です。 -->
             </p>
             <p class="mt-5">
-              データ分析力を高めるために必要なスキルはいくつかありますが、その中でも最も効果が高く学習効率も良いのが『SQL』です。
-            </p>
-            <p class="mt-5">
-              SQLはエンジニアが使う難しいスキルだと思っている方が多いと思います。しかしデータ分析で使うSQLは短期間でも十分に実務として使えるレベルで身につけることができます。
+              SQLは専門性が高く難しいスキルだと思っている方が多いかもしれませんが、データ分析で使うSQLは短期間でも十分に実務として使えるレベルで身につけることができます。
             </p>
             <p class="mt-5">
               そのためのSQL研修が『SQL
@@ -248,6 +246,61 @@
       </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="section instructor mt-5">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered mb-6">FAQ</h2>
+        <div class="faq-item mb-3">
+          <article class="message">
+            <div class="message-header" @click="toggleFAQ(1)">
+              <p>もう少し詳細な話を聞いてみたいのですが？</p>
+              <span class="icon is-small">
+                <i
+                  :class="{ 'fa-angle-down': !faq1, 'fa-angle-up': faq1 }"
+                  class="fas"
+                ></i>
+              </span>
+            </div>
+            <div v-show="faq1" class="message-body">
+              ぜひまずは無料でご相談できればと思います。お問い合わせフォームからお問い合わせください。それ以外でもメール（ht.hikaru.takahashi@gmail.com）やX（旧Twitter）でも気軽にご相談ください。
+            </div>
+          </article>
+        </div>
+        <div class="faq-item mb-3">
+          <article class="message">
+            <div class="message-header" @click="toggleFAQ(2)">
+              <p>今の時代SQLって必要ですか？ChatGPTがあれば不要では？</p>
+              <span class="icon is-small">
+                <i
+                  :class="{ 'fa-angle-down': !faq2, 'fa-angle-up': faq2 }"
+                  class="fas"
+                ></i>
+              </span>
+            </div>
+            <div v-show="faq2" class="message-body">
+              結論としてはSQLの学習は必要だと考えています。確かにChatGPTなどの生成AIの登場によって、データ分析も簡単にできる時代に変わったのも事実です。一方で生成AIもまだまだ完璧ではなく間違ったことも出力するので、出てきた結果を正しく解釈して使いこなす能力も必要になります。その意味でSQLに関しても基本的な知識を持った上で、生成AIとうまく共存させて使いこなすことが重要だと思っています。
+            </div>
+          </article>
+        </div>
+        <div class="faq-item mb-3">
+          <article class="message">
+            <div class="message-header" @click="toggleFAQ(3)">
+              <p>支援するのはSQLの研修だけですか？</p>
+              <span class="icon is-small">
+                <i
+                  :class="{ 'fa-angle-down': !faq3, 'fa-angle-up': faq3 }"
+                  class="fas"
+                ></i>
+              </span>
+            </div>
+            <div v-show="faq3" class="message-body">
+              まず大事なのはスキルを身につけることなので、最初のきっかけとしてはSQLの学習をお勧めします。ただ、それ以外にもデータ分析組織開発に向けてのコンサルや壁打ちなどのご相談にも乗れます。中長期的に一緒にデータ分析力を高めるお手伝いができればと思いますので、SQL研修以外でも気になることがあればまずはお気軽にご相談ください。
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer Section -->
     <footer class="footer contact pt-6">
       <div class="container">
@@ -297,6 +350,9 @@ export default Vue.extend({
   layout: 'empty',
   data: () => ({
     date: new Date().getFullYear(),
+    faq1: false,
+    faq2: false,
+    faq3: false,
   }),
   methods: {
     trackInquiryEvent() {
@@ -320,6 +376,11 @@ export default Vue.extend({
           value: 1,
         })
       }
+    },
+    // @ts-ignore: This line will be ignored by TypeScript compiler
+    toggleFAQ(faqNumber) {
+      // @ts-ignore: This line will be ignored by TypeScript compiler
+      this[`faq${faqNumber}`] = !this[`faq${faqNumber}`]
     },
   },
   head() {
@@ -515,6 +576,13 @@ export default Vue.extend({
   background-color: $black;
   height: 400px; /* ここに指定したい高さを設定 */
 }
+.message-header {
+  background-color: $white;
+  color: $dark;
+}
+.message-body {
+  background-color: $gray;
+}
 .footer {
   background-color: $black; /* 背景色を黒に設定 */
   color: #fff; /* テキストの色を白に設定 */
@@ -549,7 +617,7 @@ export default Vue.extend({
     padding: 0 0rem;
   }
   .main-visual .subtitle {
-    font-size: 1.5rem; /* スマホ用 */
+    font-size: 1.4rem; /* スマホ用 */
   }
   .main-visual .title {
     font-size: 2.2rem; /* スマホ用 */
