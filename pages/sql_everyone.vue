@@ -379,7 +379,9 @@ export default Vue.extend({
         })
       }
     },
+    // @ts-ignore: This line will be ignored by TypeScript compiler
     toggleFAQ(faqNumber) {
+      // @ts-ignore: This line will be ignored by TypeScript compiler
       this[`faq${faqNumber}`] = !this[`faq${faqNumber}`]
     },
   },
