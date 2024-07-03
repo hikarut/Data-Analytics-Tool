@@ -199,7 +199,7 @@
                 </p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">形式</p>
-                <p class="is-size-6">オフライン<br />（オンラインも可）</p>
+                <p class="is-size-6">オンライン<br />（オフラインも可）</p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">時間</p>
                 <p class="is-size-6">約10時間<br />（調整可能）</p>
@@ -208,7 +208,9 @@
                 <p class="is-size-6">制限なし</p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">金額</p>
-                <p class="is-size-6">70万円～</p>
+                <p class="is-size-6">
+                  70万円～<br />（時間と内容によって調整可能）
+                </p>
               </div>
             </div>
           </div>
@@ -229,7 +231,7 @@
                 <p class="is-size-6">企業様の環境に合わせてカスタマイズ</p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">形式</p>
-                <p class="is-size-6">オフライン<br />（オンラインも可）</p>
+                <p class="is-size-6">オンライン<br />（オフラインも可）</p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">時間</p>
                 <p class="is-size-6">要相談</p>
