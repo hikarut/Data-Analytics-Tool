@@ -96,7 +96,7 @@
                 <img src="/pc.png" alt="特徴1" />
               </figure>
               <p>
-                ただ説明を聞くだけではなくPCでSQLを実行できる環境を用意して実際にSQLを実行しながらハンズオン形式で進める（環境構築もサポート）
+                ①ただ説明を聞くだけではなくPCでSQLを実行できる環境を用意して実際にSQLを実行しながらハンズオン形式で進める（環境構築もサポート）
               </p>
             </div>
           </div>
@@ -106,7 +106,7 @@
                 <img src="/questions.png" alt="特徴2" />
               </figure>
               <p>
-                質疑応答に答えながら不明点があればその場でサポート。一方的にならずにインタラクティブに学習
+                ②質疑応答に答えながら不明点があればその場でサポート。一方的にならずにインタラクティブに学習。また研修後SQLに関する質問にも回答
               </p>
             </div>
           </div>
@@ -116,7 +116,7 @@
                 <img src="/data.png" alt="特徴3" />
               </figure>
               <p>
-                データ分析に特化したSQL研修にすることで短期間で学習が可能。講師の実体験をもとに実際のデータ分析で使うSQLのTipsなども混ぜながら学習
+                ③データ分析に特化したSQL研修にすることで短期間で学習が可能。講師の実体験をもとに実際のデータ分析で使うSQLのTipsなども混ぜながら学習
               </p>
             </div>
           </div>
@@ -183,9 +183,7 @@
                 <h3 class="title has-text-white is-5 mb-0">標準プラン</h3>
               </div>
               <div class="box-content content">
-                <p class="is-size-6 has-text-weight-bold text-heading">
-                  対象者
-                </p>
+                <p class="is-size-6 has-text-weight-bold text-heading">対象</p>
                 <p class="is-size-6">SQL初学者</p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">教材</p>
@@ -207,6 +205,11 @@
                 <p class="is-size-6 has-text-weight-bold text-heading">人数</p>
                 <p class="is-size-6">制限なし</p>
                 <hr />
+                <p class="is-size-6 has-text-weight-bold text-heading">事後</p>
+                <p class="is-size-6">
+                  1ヶ月間のアフターフォロー<br />（最終受講後1ヶ月間はSQLに関する質問に回答）
+                </p>
+                <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">金額</p>
                 <p class="is-size-6">
                   70万円～<br />（時間と内容によって調整可能）
@@ -222,9 +225,7 @@
                 </h3>
               </div>
               <div class="box-content content">
-                <p class="is-size-6 has-text-weight-bold text-heading">
-                  対象者
-                </p>
+                <p class="is-size-6 has-text-weight-bold text-heading">対象</p>
                 <p class="is-size-6">SQL初学者</p>
                 <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">教材</p>
@@ -239,11 +240,19 @@
                 <p class="is-size-6 has-text-weight-bold text-heading">人数</p>
                 <p class="is-size-6">制限なし</p>
                 <hr />
+                <p class="is-size-6 has-text-weight-bold text-heading">事後</p>
+                <p class="is-size-6">1ヶ月+αのアフターフォロー</p>
+                <hr />
                 <p class="is-size-6 has-text-weight-bold text-heading">金額</p>
                 <p class="is-size-6">要相談</p>
               </div>
             </div>
           </div>
+        </div>
+        <div class="has-text-centered">
+          <p>
+            ※金額に関しては厚生労働省の「人材開発支援助成金」や東京都の「DXリスキリング助成金」を活用して抑えることができる場合があります。
+          </p>
         </div>
       </div>
     </section>
