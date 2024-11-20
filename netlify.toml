@@ -11,6 +11,7 @@
   node_version = "18.17.1"
 
 [[redirects]]
-  from = "/sql_everyone"
+  from = "/sql_everyone*"
   to = "https://sql-everyone.com/"
   status = 301
+  force = true
